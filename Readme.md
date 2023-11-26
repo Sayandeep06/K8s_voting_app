@@ -15,7 +15,7 @@ Setup
 
 1.  Clone this repository:
 
-    bashCopy code
+    bash
 
     `git clone https://github.com/Sayandeep06/K8s_voting_app
     cd kubernetes-voting-app`
@@ -55,7 +55,7 @@ Deploying on Kubernetes
 
 3.  Create services:
 
-    bashCopy code
+    bash
 
     `kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
@@ -64,14 +64,14 @@ Deploying on Kubernetes
 
 4.  Check pods and services:
 
-    bashCopy code
+    bash
 
     `kubectl get pods
     kubectl get services`
 
 5.  Get URLs for services:
 
-    bashCopy code
+    bash
 
     `minikube service voting-app-service --url
     minikube service result-app-service --url`
@@ -90,7 +90,7 @@ Deploying with Deployments
 
 3.  Deploy deployments and services:
 
-    bashCopy code
+    bash
 
     `kubectl create -f voting-app-deployment.yaml
     kubectl create -f redis-deployment.yaml
@@ -105,7 +105,7 @@ Deploying with Deployments
 
 4.  Get URLs for services:
 
-    bashCopy code
+    bash
 
     `minikube service voting-app-service --url
     minikube service result-app-service --url`
@@ -115,7 +115,7 @@ Scaling Deployments
 
 To scale the voting app deployment:
 
-bashCopy code
+bash
 
 `kubectl scale deployment voting-app-deploy --replicas=3`
 
