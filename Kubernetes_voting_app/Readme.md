@@ -15,10 +15,11 @@ Setup
 
 1.  Clone this repository:
 
-    bashCopy code
-
-    `git clone https://github.com/Sayandeep06/K8s_voting_app
-    cd kubernetes-voting-app`
+    
+    ```
+    git clone https://github.com/Sayandeep06/K8s_voting_app
+    cd kubernetes-voting-app
+    ```
 
 2.  Create Kubernetes pod configurations:
 
@@ -39,42 +40,44 @@ Deploying on Kubernetes
 
 1.  Start Minikube:
 
-    bashCopy code
+    ```
 
-    `minikube start`
+    minikube start
+    ```
 
 2.  Deploy the app components:
 
-    bashCopy code
-
-    `kubectl create -f voting-app-pod.yaml
+    ```
+    kubectl create -f voting-app-pod.yaml
     kubectl create -f redispod.yaml
     kubectl create -f worker-pod.yaml
     kubectl create -f postgres-pod.yaml
-    kubectl create -f result-app-pod.yaml`
+    kubectl create -f result-app-pod.yaml
+    ```
 
 3.  Create services:
-
-    bashCopy code
-
-    `kubectl create -f redis-service.yaml
+    ```
+    kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
     kubectl create -f voting-app-service.yaml
-    kubectl create -f result-app-service.yaml`
+    kubectl create -f result-app-service.yaml
+    ```
 
 4.  Check pods and services:
 
-    bashCopy code
+    ```
 
-    `kubectl get pods
-    kubectl get services`
+    kubectl get pods
+    kubectl get services
+    ```
 
 5.  Get URLs for services:
 
-    bashCopy code
+    ```
 
-    `minikube service voting-app-service --url
-    minikube service result-app-service --url`
+    minikube service voting-app-service --url
+    minikube service result-app-service --url
+    ```
 
 Deploying with Deployments
 --------------------------
@@ -90,9 +93,9 @@ Deploying with Deployments
 
 3.  Deploy deployments and services:
 
-    bashCopy code
+    ```
 
-    `kubectl create -f voting-app-deployment.yaml
+    kubectl create -f voting-app-deployment.yaml
     kubectl create -f redis-deployment.yaml
     kubectl create -f worker-deployment.yaml
     kubectl create -f postgres-deployment.yaml
@@ -101,23 +104,26 @@ Deploying with Deployments
     kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
     kubectl create -f voting-app-service.yaml
-    kubectl create -f result-app-service.yaml`
+    kubectl create -f result-app-service.yaml
+    ```
 
 4.  Get URLs for services:
 
-    bashCopy code
-
-    `minikube service voting-app-service --url
-    minikube service result-app-service --url`
+  
+    ```
+    minikube service voting-app-service --url
+    minikube service result-app-service --url
+    ```
 
 Scaling Deployments
 -------------------
 
 To scale the voting app deployment:
 
-bashCopy code
+```
 
-`kubectl scale deployment voting-app-deploy --replicas=3`
+kubectl scale deployment voting-app-deploy --replicas=3
+```
 
 Adjust the number of replicas as needed.
 
