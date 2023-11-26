@@ -1,7 +1,8 @@
 Kubernetes Voting App
 =====================
 
-This project demonstrates the setup and deployment of a simple voting app on Kubernetes. The app consists of several components, each running in its own Kubernetes pod. The components include a voting app written in Python, a Redis database, a worker service, a PostgreSQL database, and a result app written in JavaScript.
+This project demonstrates the setup and deployment of a simple voting app on Kubernetes. The app consists of several components, each running in its own Kubernetes pod. The components include a voting app written in Python, a Redis database, a worker service, a PostgreSQL database, and a result app written in JavaScript.![Screenshot from 2023-11-13 17-45-40](https://github.com/Sayandeep06/K8s_voting_app/assets/100061797/f48f1c05-34d4-4f3c-8029-a14209ba3ab5)
+
 
 Prerequisites
 -------------
@@ -78,6 +79,8 @@ Deploying on Kubernetes
     minikube service voting-app-service --url
     minikube service result-app-service --url
     ```
+    ![Screenshot from 2023-11-13 16-41-09](https://github.com/Sayandeep06/K8s_voting_app/assets/100061797/7f1518ed-26d4-424d-88b3-7cbc007d3650)
+
 
 Deploying with Deployments
 --------------------------
@@ -114,6 +117,8 @@ Deploying with Deployments
     minikube service voting-app-service --url
     minikube service result-app-service --url
     ```
+    ![Screenshot from 2023-11-13 15-52-48](https://github.com/Sayandeep06/K8s_voting_app/assets/100061797/c7f6891c-01f3-4632-8426-bf885367449c)
+
 
 Scaling Deployments
 -------------------
