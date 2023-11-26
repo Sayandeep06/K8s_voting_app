@@ -39,13 +39,13 @@ Deploying on Kubernetes
 
 1.  Start Minikube:
 
-    bashCopy code
+    bash
 
     `minikube start`
 
 2.  Deploy the app components:
 
-    bashCopy code
+    bash
 
     `kubectl create -f voting-app-pod.yaml
     kubectl create -f redispod.yaml
