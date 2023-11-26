@@ -15,10 +15,11 @@ Setup
 
 1.  Clone this repository:
 
-    bash
-
-    `git clone https://github.com/Sayandeep06/K8s_voting_app
-    cd kubernetes-voting-app`
+    
+    ```
+    git clone https://github.com/Sayandeep06/K8s_voting_app
+    cd kubernetes-voting-app
+    ```
 
 2.  Create Kubernetes pod configurations:
 
