@@ -52,28 +52,32 @@ Deploying on Kubernetes
     kubectl create -f redispod.yaml
     kubectl create -f worker-pod.yaml
     kubectl create -f postgres-pod.yaml
-    kubectl create -f result-app-pod.yaml```
+    kubectl create -f result-app-pod.yaml
+    ```
 
 3.  Create services:
     ```
     kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
     kubectl create -f voting-app-service.yaml
-    kubectl create -f result-app-service.yaml```
+    kubectl create -f result-app-service.yaml
+    ```
 
 4.  Check pods and services:
 
     ```
 
     kubectl get pods
-    kubectl get services```
+    kubectl get services
+    ```
 
 5.  Get URLs for services:
 
     ```
 
     minikube service voting-app-service --url
-    minikube service result-app-service --url```
+    minikube service result-app-service --url
+    ```
 
 Deploying with Deployments
 --------------------------
@@ -108,7 +112,8 @@ Deploying with Deployments
   
     ```
     minikube service voting-app-service --url
-    minikube service result-app-service --url```
+    minikube service result-app-service --url
+    ```
 
 Scaling Deployments
 -------------------
@@ -117,7 +122,8 @@ To scale the voting app deployment:
 
 ```
 
-kubectl scale deployment voting-app-deploy --replicas=3```
+kubectl scale deployment voting-app-deploy --replicas=3
+```
 
 Adjust the number of replicas as needed.
 
