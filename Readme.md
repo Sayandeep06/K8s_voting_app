@@ -40,42 +40,40 @@ Deploying on Kubernetes
 
 1.  Start Minikube:
 
-    bash
+    ```
 
-    `minikube start`
+    minikube start
+    ```
 
 2.  Deploy the app components:
 
-    bash
-
-    `kubectl create -f voting-app-pod.yaml
+    ```
+    kubectl create -f voting-app-pod.yaml
     kubectl create -f redispod.yaml
     kubectl create -f worker-pod.yaml
     kubectl create -f postgres-pod.yaml
-    kubectl create -f result-app-pod.yaml`
+    kubectl create -f result-app-pod.yaml```
 
 3.  Create services:
-
-    bash
-
-    `kubectl create -f redis-service.yaml
+    ```
+    kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
     kubectl create -f voting-app-service.yaml
-    kubectl create -f result-app-service.yaml`
+    kubectl create -f result-app-service.yaml```
 
 4.  Check pods and services:
 
-    bash
+    ```
 
-    `kubectl get pods
-    kubectl get services`
+    kubectl get pods
+    kubectl get services```
 
 5.  Get URLs for services:
 
-    bash
+    ```
 
-    `minikube service voting-app-service --url
-    minikube service result-app-service --url`
+    minikube service voting-app-service --url
+    minikube service result-app-service --url```
 
 Deploying with Deployments
 --------------------------
@@ -91,9 +89,9 @@ Deploying with Deployments
 
 3.  Deploy deployments and services:
 
-    bash
+    ```
 
-    `kubectl create -f voting-app-deployment.yaml
+    kubectl create -f voting-app-deployment.yaml
     kubectl create -f redis-deployment.yaml
     kubectl create -f worker-deployment.yaml
     kubectl create -f postgres-deployment.yaml
@@ -102,23 +100,24 @@ Deploying with Deployments
     kubectl create -f redis-service.yaml
     kubectl create -f postgres-service.yaml
     kubectl create -f voting-app-service.yaml
-    kubectl create -f result-app-service.yaml`
+    kubectl create -f result-app-service.yaml
+    ```
 
 4.  Get URLs for services:
 
-    bash
-
-    `minikube service voting-app-service --url
-    minikube service result-app-service --url`
+  
+    ```
+    minikube service voting-app-service --url
+    minikube service result-app-service --url```
 
 Scaling Deployments
 -------------------
 
 To scale the voting app deployment:
 
-bash
+```
 
-`kubectl scale deployment voting-app-deploy --replicas=3`
+kubectl scale deployment voting-app-deploy --replicas=3```
 
 Adjust the number of replicas as needed.
 
